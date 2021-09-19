@@ -11,7 +11,17 @@ import { NotImplementedError } from '../extensions/index.js';
  * For s1 = "aabcc" and s2 = "adcaa", the output should be 3
  * Strings have 3 common characters - 2 "a"s and 1 "c".
  */
-export default function getCommonCharacterCount(/* s1, s2 */) {
-  throw new NotImplementedError('Not implemented');
-  // remove line with error and write your code here
+export default function getCommonCharacterCount(word1, word2) {
+  let str2 = word2,
+  count = 0;
+
+  word1.split("").forEach(element => {
+    const index = str2.split("").indexOf(element);
+    if (index > -1) {
+      count += 1;
+      str2 = `${str2.slice(0,index)}${str2.slice(index+1)}}`
+    }
+  })
+
+  return count;
 }
