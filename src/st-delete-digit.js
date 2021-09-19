@@ -13,7 +13,6 @@ import { NotImplementedError } from '../extensions/index.js';
  */
 export default function deleteDigit(n) {
   const arrNumbers = [];
-  
     
   n = String(n);
   for (let i = 0; i < n.length; i++) { 
