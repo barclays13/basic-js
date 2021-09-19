@@ -19,7 +19,7 @@ export default function getCommonCharacterCount(word1, word2) {
     const index = str2.split("").indexOf(element);
     if (index > -1) {
       count += 1;
-      str2 = `${str2.slice(0,index)}${str2.slice(index+1)}}`
+      str2 = `${str2.slice(0,index)}${str2.slice(index+1)}}`;
     }
   })
 
